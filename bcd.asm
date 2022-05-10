@@ -14,7 +14,7 @@ start:
  adc ah, bh ; add upper two digits. Result in ah
  mov al, ah ; al=ah as daa works on al only
  daa ; adjust result to valid BCD
- mov bh, al ; store result in bh 
+ mov bh, al ; store result in bh
  mov ch, 04h ; Count of digits to be displayed
  mov cl, 04h ; Count to roll by 4 bits
 l2: rol bx, cl ; roll bl so that msb comes to lsb
